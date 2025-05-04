@@ -1,0 +1,7 @@
+arb-dir: ../../packages/uikit/l10n
+nullable-getter: false
+output-dir: ../../packages/uikit/lib/src/gen
+output-localization-file: app_localizations.dart
+synthetic-package: false
+template-arb-file: app_en.arb
+untranslated-messages-file: ../../packages/uikit/l10n/untranslated.json

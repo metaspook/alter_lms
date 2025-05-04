@@ -1,0 +1,9 @@
+name: alter_lms
+publish_to: none
+environment:
+  sdk: ^3.6.0
+workspace:
+  - apps/user_app
+  - apps/admin_app
+  - packages/uikit
+  - packages/utils

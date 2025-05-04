@@ -1,0 +1,7 @@
+{
+    "@@locale": "en",
+    "counterAppBarTitle": "Alter LMS",
+    "@counterAppBarTitle": {
+        "description": "Text shown in the AppBar of the Alter LMS Page"
+    }
+}
