@@ -14,10 +14,13 @@ migrate_working_dir/
 *.iml
 *.ipr
 *.iws
-.idea/
+.idea/*
+!.idea/runConfigurations
 
 # VSCode related
 .vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
 
 # Flutter/Dart/Pub related
 .dart_tool/
@@ -28,3 +31,10 @@ migrate_working_dir/
 .pub/
 /build/
 pubspec.lock
+
+# DevTools related
+devtools_options.yaml
+
+# Private related
+private/*
+!private/README.md
