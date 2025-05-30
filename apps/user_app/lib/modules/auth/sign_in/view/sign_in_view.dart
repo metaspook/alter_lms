@@ -1,4 +1,7 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:uikit/uikit.dart';
+import 'package:user_app/configs/configs.dart';
 
 class SignInView extends StatelessWidget {
   const SignInView({super.key});
@@ -39,6 +42,8 @@ class SignInView extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: 'Sign-Up here.',
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () => context.goNamed(RouteNames.signIn),
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       decoration: TextDecoration.underline,

@@ -1,0 +1,16 @@
+name: domain
+description: Alter LMS Domain (models, repositories).
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+resolution: workspace
+
+dependencies:
+  equatable: ^2.0.7
+
+dev_dependencies:
+  mocktail: ^1.0.4
+  test: ^1.25.8
+  very_good_analysis: ^8.0.0
