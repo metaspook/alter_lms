@@ -28,7 +28,7 @@ class SignInView extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () => context.goNamed(RouteNames.dashboard),
             style: ElevatedButton.styleFrom(
               textStyle: Theme.of(context).textTheme.titleMedium,
             ),
@@ -43,7 +43,7 @@ class SignInView extends StatelessWidget {
                   TextSpan(
                     text: 'Sign-Up here.',
                     recognizer: TapGestureRecognizer()
-                      ..onTap = () => context.goNamed(RouteNames.signIn),
+                      ..onTap = () => context.goNamed(RouteNames.signUp),
                     style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       decoration: TextDecoration.underline,

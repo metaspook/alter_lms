@@ -19,17 +19,17 @@ class _AppViewState extends State<AppView> {
   void initState() {
     super.initState();
     _router = AppRouter(
-      initialLocation: '/${RouteNames.signUp.toKebabCase()}',
+      initialLocation: '/${RouteNames.signIn.toKebabCase()}',
       routes: routes,
-      redirect: (context, state) {
-        final status = context.read<AppBloc>().state.status;
+      // redirect: (context, state) {
+      //   final status = context.read<AppBloc>().state.status;
 
-        if (status == AppStatus.unauthenticated) {
-          return '/${RouteNames.signUp.toKebabCase()}';
-        }
+      //   if (status == AppStatus.unauthenticated) {
+      //     return '/${RouteNames.signIn.toKebabCase()}';
+      //   }
 
-        return null;
-      },
+      //   return null;
+      // },
     )..attachListener();
   }
 
