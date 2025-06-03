@@ -29,6 +29,10 @@ abstract final class AppThemes {
   static const actionsPadding = EdgeInsets.only(
     left: appSpacing * 2,
     right: appSpacing * 2,
+  );
+  static const actionsPaddingBottom = EdgeInsets.only(
+    left: appSpacing * 2,
+    right: appSpacing * 2,
     bottom: appSpacing * 1.125,
   );
   //- dimensions

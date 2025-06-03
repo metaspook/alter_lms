@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:uikit/uikit.dart';
 
 /// BuildContext Extensions.
 extension BuildContextExt on BuildContext {
+  AppLocalizations get l10n => AppLocalizations.of(this);
+  Locale get locale => Localizations.localeOf(this);
   ThemeData get theme => Theme.of(this);
   MediaQueryData get mediaQuery => MediaQuery.of(this);
   ScaffoldState get scaffold => Scaffold.of(this);
