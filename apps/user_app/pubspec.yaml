@@ -19,6 +19,8 @@ dependencies:
     path: ../../packages/uikit
   utils:
     path: ../../packages/utils
+  domain:
+    path: ../../packages/domain
 
 dev_dependencies:
   bloc_test: ^10.0.0

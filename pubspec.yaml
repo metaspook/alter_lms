@@ -7,3 +7,4 @@ workspace:
   - apps/admin_app
   - packages/uikit
   - packages/utils
+  - packages/domain
