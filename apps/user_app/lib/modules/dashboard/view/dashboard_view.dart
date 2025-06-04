@@ -33,14 +33,17 @@ class DashboardView extends StatelessWidget {
               padding: const EdgeInsets.all(appSpacing),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
+                childAspectRatio: 5
               ),
               itemCount: _buildGridMenus().length,
               itemBuilder: (context, index) {
                 return GridTile(
                   header: GridTileBar(
-                    title: Text(_buildGridMenus()[index].key),
+                    title: SvgPicture.asset(
+                      _buildGridMenus()[index].imageName!,
+                    ),
                   ),
-                  child: Image.asset(_buildGridMenus()[index].imageName!),
+                  child: Text(_buildGridMenus()[index].key)
                 );
               },
             ),
@@ -53,11 +56,11 @@ class DashboardView extends StatelessWidget {
 
 List<Menu> _buildGridMenus() {
   return [
-    Menu(id: uuid(), key: 'course', imageName: Assets.images.user1.keyName),
-    Menu(id: uuid(), key: 'course', imageName: Assets.images.user1.keyName),
-    Menu(id: uuid(), key: 'course', imageName: Assets.images.user1.keyName),
-    Menu(id: uuid(), key: 'course', imageName: Assets.images.user1.keyName),
-    Menu(id: uuid(), key: 'course', imageName: Assets.images.user1.keyName),
+    Menu(id: uuid(), key: 'course', imageName: Assets.icons.shop),
+    Menu(id: uuid(), key: 'course', imageName: Assets.icons.courses),
+    Menu(id: uuid(), key: 'course', imageName: Assets.icons.courses),
+    Menu(id: uuid(), key: 'course', imageName: Assets.icons.courses),
+    Menu(id: uuid(), key: 'course', imageName: Assets.icons.courses),
   ];
   
 }

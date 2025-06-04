@@ -22,11 +22,17 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/courses.svg
+  String get courses => 'packages/uikit/assets/icons/courses.svg';
+
   /// File path: assets/icons/placeholder
   String get placeholder => 'packages/uikit/assets/icons/placeholder';
 
+  /// File path: assets/icons/shop.svg
+  String get shop => 'packages/uikit/assets/icons/shop.svg';
+
   /// List of all assets
-  List<String> get values => [placeholder];
+  List<String> get values => [courses, placeholder, shop];
 }
 
 class $AssetsImagesGen {
