@@ -1,5 +1,5 @@
 {
-    "@@locale": "en",
+    "@@locale": "bn",
     "dashboardAppBarTitle": "Alter LMS",
     "@dashboardAppBarTitle": {
         "description": "Text shown in the AppBar of the Dashboard Page"

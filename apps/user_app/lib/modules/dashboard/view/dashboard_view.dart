@@ -8,9 +8,7 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
-
+    final l10n = context.l10n;
     return Scaffold(
       drawer: const Drawer(),
       appBar: AppBar(
@@ -30,20 +28,32 @@ class DashboardView extends StatelessWidget {
           Container(height: 200, color: Colors.red),
           Expanded(
             child: GridView.builder(
-              padding: const EdgeInsets.all(appSpacing),
+              padding: const EdgeInsets.all(appSpacing * 2),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 5
+                crossAxisCount: 3,
+                crossAxisSpacing: appSpacing * 1.5,
+                mainAxisSpacing: appSpacing * 1.5,
+                // childAspectRatio: 2,
+                mainAxisExtent: 75
               ),
               itemCount: _buildGridMenus().length,
               itemBuilder: (context, index) {
-                return GridTile(
-                  header: GridTileBar(
-                    title: SvgPicture.asset(
-                      _buildGridMenus()[index].imageName!,
+                return Card(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: appSpacing),
+                    child: Column(
+                      spacing: appSpacing * .25,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Expanded(
+                          child: SvgPicture.asset(
+                            _buildGridMenus()[index].imageName!,
+                          ),
+                        ),
+                        Text(l10n.resolve(_buildGridMenus()[index].key)),
+                      ],
                     ),
                   ),
-                  child: Text(_buildGridMenus()[index].key)
                 );
               },
             ),
@@ -56,11 +66,12 @@ class DashboardView extends StatelessWidget {
 
 List<Menu> _buildGridMenus() {
   return [
-    Menu(id: uuid(), key: 'course', imageName: Assets.icons.shop),
-    Menu(id: uuid(), key: 'course', imageName: Assets.icons.courses),
-    Menu(id: uuid(), key: 'course', imageName: Assets.icons.courses),
-    Menu(id: uuid(), key: 'course', imageName: Assets.icons.courses),
-    Menu(id: uuid(), key: 'course', imageName: Assets.icons.courses),
+    Menu(id: uuid(), key: 'liveClass', imageName: Assets.icons.shop),
+    Menu(id: uuid(), key: 'shop', imageName: Assets.icons.courses),
+    Menu(id: uuid(), key: 'courses', imageName: Assets.icons.courses),
+    Menu(id: uuid(), key: 'students', imageName: Assets.icons.courses),
+    Menu(id: uuid(), key: 'groups', imageName: Assets.icons.courses),
+    Menu(id: uuid(), key: 'signOut', imageName: Assets.icons.courses),
   ];
   
 }
