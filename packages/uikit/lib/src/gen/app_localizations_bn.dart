@@ -9,13 +9,22 @@ class AppLocalizationsBn extends AppLocalizations {
   AppLocalizationsBn([String locale = 'bn']) : super(locale);
 
   @override
-  String get dashboardAppBarTitle => 'Alter LMS';
-
-  @override
   String get courses => 'Courses';
 
   @override
+  String get dashboardAppBarTitle => 'Alter LMS';
+
+  @override
   String get groups => 'Groups';
+
+  @override
+  String get liveClass => 'Live Class';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get settings => 'Settings';
 
   @override
   String get shop => 'Shop';
@@ -25,7 +34,4 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get students => 'Students';
-
-  @override
-  String get liveClass => 'Live Class';
 }

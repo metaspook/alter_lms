@@ -1,3 +1,4 @@
+import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:uikit/uikit.dart';
@@ -12,7 +13,9 @@ class DashboardPage extends StatelessWidget {
     path: '/${RouteNames.dashboard.toKebabCase()}',
     name: RouteNames.dashboard,
     builder: (context, state) => BlocProvider(
-      create: (_) => DashboardCubit(),
+      create: (_) => DashboardCubit(
+        appNotificationRepo: context.read<AppNotificationRepo>(),
+      ),
       child: const DashboardPage(),
     ),
   );

@@ -13,6 +13,8 @@ extension AppLocalizationsExt on AppLocalizations {
       'students' => students,
       'groups' => groups,
       'signOut' => signOut,
+      'settings' => settings,
+      'profile' => profile,
       _ => '',
     };
     if (value.isEmpty) {

@@ -98,23 +98,41 @@ abstract class AppLocalizations {
     Locale('en'),
   ];
 
-  /// Text shown in the AppBar of the Dashboard Page
-  ///
-  /// In en, this message translates to:
-  /// **'Alter LMS'**
-  String get dashboardAppBarTitle;
-
   /// No description provided for @courses.
   ///
   /// In en, this message translates to:
   /// **'Courses'**
   String get courses;
 
+  /// Text shown in the AppBar of the Dashboard Page
+  ///
+  /// In en, this message translates to:
+  /// **'Alter LMS'**
+  String get dashboardAppBarTitle;
+
   /// No description provided for @groups.
   ///
   /// In en, this message translates to:
   /// **'Groups'**
   String get groups;
+
+  /// No description provided for @liveClass.
+  ///
+  /// In en, this message translates to:
+  /// **'Live Class'**
+  String get liveClass;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settings;
 
   /// No description provided for @shop.
   ///
@@ -133,12 +151,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Students'**
   String get students;
-
-  /// No description provided for @liveClass.
-  ///
-  /// In en, this message translates to:
-  /// **'Live Class'**
-  String get liveClass;
 }
 
 class _AppLocalizationsDelegate

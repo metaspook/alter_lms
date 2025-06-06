@@ -1,13 +1,15 @@
 {
-    "@@locale": "bn",
-    "dashboardAppBarTitle": "Alter LMS",
-    "@dashboardAppBarTitle": {
-        "description": "Text shown in the AppBar of the Dashboard Page"
-    },
-    "courses": "Courses",
-    "groups": "Groups",
-    "shop": "Shop",
-    "signOut": "Sign Out",
-    "students": "Students",
-    "liveClass": "Live Class"
+"@@locale": "bn",
+"courses": "Courses",
+"dashboardAppBarTitle": "Alter LMS",
+"@dashboardAppBarTitle": {
+    "description": "Text shown in the AppBar of the Dashboard Page"
+},
+"groups": "Groups",
+"liveClass": "Live Class",
+"profile": "Profile",
+"settings": "Settings",
+"shop": "Shop",
+"signOut": "Sign Out",
+"students": "Students"
 }

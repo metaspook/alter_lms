@@ -25,14 +25,34 @@ class $AssetsIconsGen {
   /// File path: assets/icons/courses.svg
   String get courses => 'packages/uikit/assets/icons/courses.svg';
 
-  /// File path: assets/icons/placeholder
-  String get placeholder => 'packages/uikit/assets/icons/placeholder';
+  /// File path: assets/icons/groups.svg
+  String get groups => 'packages/uikit/assets/icons/groups.svg';
+
+  /// File path: assets/icons/live_class.svg
+  String get liveClass => 'packages/uikit/assets/icons/live_class.svg';
+
+  /// File path: assets/icons/profile.svg
+  String get profile => 'packages/uikit/assets/icons/profile.svg';
+
+  /// File path: assets/icons/settings.svg
+  String get settings => 'packages/uikit/assets/icons/settings.svg';
 
   /// File path: assets/icons/shop.svg
   String get shop => 'packages/uikit/assets/icons/shop.svg';
 
+  /// File path: assets/icons/students.svg
+  String get students => 'packages/uikit/assets/icons/students.svg';
+
   /// List of all assets
-  List<String> get values => [courses, placeholder, shop];
+  List<String> get values => [
+    courses,
+    groups,
+    liveClass,
+    profile,
+    settings,
+    shop,
+    students,
+  ];
 }
 
 class $AssetsImagesGen {
