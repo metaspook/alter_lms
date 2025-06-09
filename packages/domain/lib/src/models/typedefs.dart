@@ -1,5 +1,6 @@
 typedef Json = Map<String, dynamic>;
-
+typedef DelayRecord = ({int none, int normal, int extended});
+typedef DirectoryRecord = ({String documents, String applicationSupport});
 // extension JsonExt on Json {
 //   T get<T>(String key) {
 //     final v = this[key];

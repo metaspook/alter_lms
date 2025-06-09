@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:uikit/uikit.dart';
 
 class AppBlocObserver extends BlocObserver {
   const AppBlocObserver();
@@ -26,8 +27,23 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   };
 
   Bloc.observer = const AppBlocObserver();
-
   // Add cross-flavor configuration here
+  // Show splash screen while loading
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  // Only call clearSavedSettings() during testing to reset internal values.
+  // if (debugMode) await Upgrader.clearSavedSettings();
+  //-- Initialize AppConfig
+  final deviceId = await AppConfig.init(
+    // updateType: UpdateType.immediate,
+    serverMode: ServerMode.remote,
+    // refreshedTokenGetter: () => App.refreshTokenGetter(),
+  );
+  // final authRepo = AuthRepo(webApiService: webApiService, deviceId: deviceId);
+  // Remove splash screen and run app
+  // FlutterNativeSplash.remove();
+  //-- Run entrypoint App widget.
+
 
   runApp(await builder());
 }

@@ -10,3 +10,12 @@ const double appSpacing = 8;
 // SystemChannels.textInput.invokeMethod('TextInput.hide');
 
 const appGap = Gap(appSpacing);
+
+class GapX extends Gap {
+  const GapX({
+    double mainAxisExtent = appSpacing,
+    super.key,
+    double crossAxisExtent = double.infinity,
+    super.color,
+  }) : super(mainAxisExtent, crossAxisExtent: crossAxisExtent);
+}

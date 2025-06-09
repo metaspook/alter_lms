@@ -25,6 +25,7 @@ class DashboardView extends StatelessWidget {
         ],
       ),
       body: ListView(
+        padding: const EdgeInsets.all(appSpacing * 2),
         // mainAxisSize: MainAxisSize.min,
         children: [
           // ConstrainedBox(
@@ -42,6 +43,58 @@ class DashboardView extends StatelessWidget {
           //     ),
           //   ),
           // ),
+          SizedBox(
+            height: 200,
+            // color: Colors.indigoAccent,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('Theme'),
+                    ToggleButtons(
+                      constraints: const BoxConstraints(
+                        maxHeight: 50,
+                        minWidth: 50,
+                      ),
+                      isSelected: const [true, false, false],
+                      children: const [
+                        Text('Auto'),
+                        Text('Dark'),
+                        Text('Light'),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('Notifications'),
+                    ToggleButtons(
+                      constraints: const BoxConstraints(
+                        maxHeight: 50,
+                        minWidth: 50,
+                      ),
+                      isSelected: const [true, false],
+                      children: const [Text('On'), Text('Off')],
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('Language'),
+                    DropdownButton(
+                      isDense: true,
+                      onChanged: (value) {},
+                      items: const [DropdownMenuItem(child: Text('English'))],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
           BlocSelector<DashboardCubit, DashboardState, List<AppNotification>>(
             selector: (state) =>
                 state.appNotifications.where((an) => an.type.isEvent).toList(),
@@ -49,11 +102,12 @@ class DashboardView extends StatelessWidget {
               return UpcomingEventsCard(eventNotifications: eventNotifications);
             },
           ),
+          const GapX(),
           Expanded(
             child: GridView.builder(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              padding: const EdgeInsets.all(appSpacing * 2),
+              padding: EdgeInsets.zero,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: appSpacing * 1.5,

@@ -38,15 +38,17 @@ class _UpcomingEventsCardState extends State<UpcomingEventsCard> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text('💡 Upcoming Events'),
         ConstrainedBox(
           constraints: const BoxConstraints(maxHeight: 50),
           child: CarouselView(
             controller: _controller,
+            padding: EdgeInsets.zero,
             itemExtent: context.mediaQuery.size.width,
             // shrinkExtent: 5,
-            padding: const EdgeInsets.all(10),
             children: List.generate(
               widget.eventNotifications.length,
               (index) =>

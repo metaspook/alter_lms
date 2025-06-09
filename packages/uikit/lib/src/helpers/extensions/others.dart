@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:gap/gap.dart';
 import 'package:uikit/uikit.dart';
 
@@ -105,4 +106,17 @@ extension GapExt on Gap {
     crossAxisExtent: crossAxisExtent,
     color: color,
   );
+}
+
+extension FlutterSecureStorageExt on FlutterSecureStorage {
+  /// readExistingOrCreate  new
+  Future<String?> readOrWrite({
+    required String key,
+    required String? value,
+  }) async {
+    final pervious = await read(key: key);
+    if (pervious != null) return pervious;
+    await write(key: key, value: value);
+    return read(key: key);
+  }
 }

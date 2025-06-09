@@ -1,11 +1,12 @@
+import 'dart:developer' as dev;
 import 'dart:math';
 import 'dart:typed_data';
 
 // import 'package:database_client/database_client.dart';
 // import 'package:domain/domain.dart';
 import 'package:http/http.dart';
+import 'package:logging/logging.dart';
 // import 'package:image/image.dart' as img;
-// import 'package:logging/logging.dart';
 // import 'package:powersync_helper/powersync_helper.dart';
 // import 'package:utils/src/src.dart';
 import 'package:utils/utils.dart';
@@ -213,20 +214,20 @@ int generateRandomNumber([int length = 5]) {
 }
 
 ///
-// void devLog(LogRecord record) {
-//   if (debugMode) {
-//     dev.log(
-//       record.message,
-//       time: record.time,
-//       sequenceNumber: record.sequenceNumber,
-//       level: record.level.value,
-//       name: record.loggerName,
-//       zone: record.zone,
-//       error: record.error,
-//       stackTrace: record.stackTrace,
-//     );
-//   }
-// }
+void devLog(LogRecord record) {
+  if (debugMode) {
+    dev.log(
+      record.message,
+      time: record.time,
+      sequenceNumber: record.sequenceNumber,
+      level: record.level.value,
+      name: record.loggerName,
+      zone: record.zone,
+      error: record.error,
+      stackTrace: record.stackTrace,
+    );
+  }
+}
 
 /// {@template doPrint}
 /// [print] with extended string, color and log Levels:
